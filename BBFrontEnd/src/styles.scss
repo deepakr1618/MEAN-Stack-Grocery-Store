@@ -1,0 +1,31 @@
+@import "./app/colors.scss";
+
+*{
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+img{
+    user-select: none;
+}
+body{
+    margin:0px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: $theme-color-dark;
+    transition: 0.2s all ease;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: $theme-color-light;
+  }

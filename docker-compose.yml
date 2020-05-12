@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  angular:
+    build: BBFrontEnd
+    ports:
+      - "80:80"
+
+  express:
+    build: BBBackEnd
+    ports:
+      - "3000:3000"
+    links:
+      - database
+
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"

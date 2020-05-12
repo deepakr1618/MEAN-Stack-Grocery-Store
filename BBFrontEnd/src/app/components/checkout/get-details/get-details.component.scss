@@ -1,0 +1,45 @@
+@import "../../../colors.scss";
+@import "../../signup/signup.component.scss";
+
+.getDet-container{
+    width:100%;
+    .form-cont{
+        margin-top: 50px;
+        width:100%;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 45px;
+        justify-items: center;
+        align-items: center;
+        .input-cont{
+            font-size: 15px !important;
+            input{
+                font-size: 15px !important;
+            }
+            input:disabled{
+                + label{
+                    @include labelHover
+                }
+            }
+        }
+        .submit{
+            width:80%;
+            position: relative;
+            margin:10px auto;
+            display:flex;
+            justify-content: flex-start;
+            input[type="button"]{
+                width:200px;
+                height:40px;
+                border-radius: 7px;
+                background: $theme-color-dark;
+                color:white;
+                border-style: none;
+                cursor: pointer;
+                font-size: 15px !important;
+                text-transform: uppercase;
+            }
+        }
+       
+    }
+}

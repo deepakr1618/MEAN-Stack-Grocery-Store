@@ -1,0 +1,40 @@
+<div class="order-card-cont">
+    <div class="load_overlay" *ngIf="loading">
+        <div class="inside">
+            <div class="loading_circle"></div>
+            <div class="loading_circle"></div>
+            <div class="loading_circle"></div>
+        </div>
+    </div>
+    <p class="id">
+        Order ID : {{order._id}}
+    </p>
+    <p class="status">
+        Status : {{ order.orderStatus }}
+    </p>
+    <div class="item-cont">
+        <div class="product" *ngFor="let product of order.cart">
+            <div class="image">
+                <img src={{getImage(product.productId)}} alt="">
+            </div>
+            <div class="info">
+                <h5>
+                    {{getName(product.productId)}}
+                </h5>
+                <p>Quantity : {{product.quantity}}</p>
+                <p>Price : {{getPrice(product.productId)}}</p>
+            </div>
+        </div>
+    </div>
+    <h4>Total : {{order.total}}</h4>
+    <div class="options">
+        <h5>What is the status of the order : </h5>
+        <div class="button-cont">
+            <button class="placed" (click)="orderPlaced()" [ngClass]="{'active': order.orderStatus=='Order Placed'}">Order Placed</button>
+            <button class="packaged" (click)="orderPackaged()"  [ngClass]="{'active': order.orderStatus=='Packaged'}">Packaged</button>
+            <button class="shipping" (click)="orderShipped()"  [ngClass]="{'active': order.orderStatus=='Shipping'}">Shipping</button>
+            <button class="out" (click)="orderOutForDelivery()" [ngClass]="{'active': order.orderStatus=='Out For Delivery'}">Out For Delivery</button>
+            <button class="completed" (click)="orderCompleted()" [ngClass]="{'active': order.orderStatus=='Completed'}">Completed</button>
+        </div>
+    </div>
+</div>

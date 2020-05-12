@@ -1,0 +1,31 @@
+<div class="getDet-container">
+    <div class="form-cont">
+        <div class="input-cont">
+            <input type="text" value="{{userEmail}}" disabled #email>
+            <label>Email</label>
+        </div>
+        <div class="input-cont">
+            <input type="text" value="{{userName}}" disabled #name>
+            <label>Name</label>
+        </div>
+        <div class="input-cont">
+            <input type="number" value="{{userDoorNumber}}"  #dr>
+            <label>Door Number</label>
+        </div>
+        <div class="input-cont">
+            <input type="text" value="{{userStreet}}"  #street>
+            <label>Street</label>
+        </div>
+        <div class="input-cont">
+            <input type="number" value="{{userPinCode}}" #pincode>
+            <label>PinCode</label>
+        </div>
+        <div class="input-cont">
+            <input type="text" value="{{userCity}}" #city>
+            <label>City</label>
+        </div>
+        <div class="submit" *ngIf="allowProceed">
+            <input type="button" value="Place Order" (click)="submitOrder(dr.value,street.value,pincode.value,city.value)">
+        </div>
+    </div>
+</div>

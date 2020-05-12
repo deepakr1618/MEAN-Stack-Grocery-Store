@@ -1,0 +1,23 @@
+@import "../../colors.scss";
+
+.not-supported{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: $theme-color-dark;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    h1, h5{
+        margin:0px;
+        font-size: 25px;
+    }
+    h1{
+        font-size:50px;
+    }
+}

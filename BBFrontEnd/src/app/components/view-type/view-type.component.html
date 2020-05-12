@@ -1,0 +1,15 @@
+
+<div class="view-container">
+    <h1 class="title">{{type | titlecase }}:</h1>
+    <div *ngIf="!products">
+        <h3>Loading...</h3>
+    </div>
+    <div class="items-container">       
+        <item-card *ngFor="let prod of products"
+        [title]="prod.name" 
+        [url]="prod.images[0]"
+        [price]="prod.price"
+        [product]="prod"
+        ></item-card>  
+    </div>
+</div>

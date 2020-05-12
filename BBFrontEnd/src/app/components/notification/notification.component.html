@@ -1,0 +1,5 @@
+<div class="notification-cont">
+    <div *ngFor="let noti of notifications$ | async" class="noti">
+        <p class="text">{{noti.text}}</p>
+    </div>
+</div>

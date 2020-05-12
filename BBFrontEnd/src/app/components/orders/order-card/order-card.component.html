@@ -1,0 +1,30 @@
+<div class="order-card-cont">
+    <div class="load_overlay" *ngIf="loading">
+        <div class="inside">
+            <div class="loading_circle"></div>
+            <div class="loading_circle"></div>
+            <div class="loading_circle"></div>
+        </div>
+    </div>
+    <p class="id">
+        Order ID : {{order.orderId}}
+    </p>
+    <p class="status">
+        Status : <span [ngClass]="{'completed' : completed}">{{ status }}</span>
+    </p>
+    <div class="item-cont">
+        <div class="product" *ngFor="let product of orderItems">
+            <div class="image">
+                <img src={{product.item.images[0]}} alt="">
+            </div>
+            <div class="info">
+                <h5>
+                    {{product.item.name}}
+                </h5>
+                <p>Quantity : {{product.quantity}}</p>
+                <p>Price : {{product.item.price}}</p>
+            </div>
+        </div>
+    </div>
+    <h4>Total : {{total}}</h4>
+</div>

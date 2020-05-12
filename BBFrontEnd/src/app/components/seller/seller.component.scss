@@ -1,0 +1,36 @@
+@import "../../colors.scss";
+
+.seller-cont{
+    width:100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .title{
+        width:70%;
+    }
+    input[type="button"]{
+        border-style: none;
+        padding: 8px 25px;
+        border-radius: 7px;
+        background: $theme-color-dark;
+        color:#ffffff;
+        cursor: pointer;
+        border:2px solid transparent;
+        &.reveal{
+            border:2px solid $theme-color-dark;
+            background:white;
+            color:$theme-color-dark;
+        }
+    }
+    .seller-item-cont{
+        width:70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .order-card{
+            width:100%;
+            margin: 10px 0px;
+        }
+    }
+}

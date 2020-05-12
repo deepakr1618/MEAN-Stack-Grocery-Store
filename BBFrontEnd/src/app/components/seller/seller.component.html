@@ -1,0 +1,16 @@
+<div class="seller-cont">
+    <h2 class="title">Pending Orders</h2>
+    <div class="toggle">
+        <input type="button" [ngClass]="{'reveal' : hiddenCompletedOrders}" value=" {{hiddenCompletedOrders ? 'Reveal' : 'Hide'}} completed orders" (click)="hideCompleted()">
+    </div>
+    <div class="seller-item-cont">
+        <div *ngIf="!mUserData || !mUserData.email">
+            <h4>Please Login</h4>
+        </div>
+        <ng-container *ngIf="loaded && mUserData.email" >
+            <div class="order-card" *ngFor="let order of orders">
+                <item-view [order]="order"></item-view>
+            </div>
+        </ng-container>
+    </div>
+</div>

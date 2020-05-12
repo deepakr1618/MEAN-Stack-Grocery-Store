@@ -1,0 +1,31 @@
+.section-container{
+    width:70vw;
+    height:120px;
+    border-radius: 7px;
+    box-shadow: 5px 5px 12px 12px rgba(0, 0, 0, 0.075);
+    background:white;
+    margin:40px 0px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    .type{
+        height:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        user-select: none;
+        img{
+            height: 50%;
+            margin:0px;
+        }
+        p{
+            transform: translateY(0px);
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size:10px;
+        }
+    }
+}

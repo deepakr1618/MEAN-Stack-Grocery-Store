@@ -1,0 +1,77 @@
+@import "../../colors.scss";
+
+.landing{
+    width:100vw;
+    max-width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    .starting{
+        width:70%;
+        padding:0px;
+        margin:0px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        .top{
+            height:100%;
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            .left{
+                width:40%;
+                height:100%;
+                display:flex;
+                justify-content: center;
+                flex-direction: column;
+                h2, h4{
+                    margin:0px;
+                }
+                h1{
+                    font-size: 35px;
+                }
+                h4{
+                    margin-top: 15px;
+                    font-weight: normal;
+                }
+                
+                .name{
+                    color:$theme-color-dark;
+                    font-weight: bolder;
+                }
+                .fresh{
+                    color:$theme-color-dark;
+                    font-weight: 600;
+                }
+
+            }
+            .right{
+                width:40%;
+                height:100%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                .store{
+                    width:350px;
+                }
+            }
+        }
+    }
+    
+    .sections{
+        width:70%;
+        max-width:70%;
+        margin-top:70px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .empty{
+        width:70%;
+        height:150px;
+    }
+}

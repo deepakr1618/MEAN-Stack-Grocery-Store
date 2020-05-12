@@ -1,0 +1,21 @@
+<div class="item-container">
+    <img src={{images[0]}} alt="">
+    <p>
+        {{name}}
+    </p>
+    <div class="quantity-editor">
+        <button (click) = "removeAProduct()">
+            -
+        </button>
+        {{quantity}}
+        <button (click) = "addAProduct()" >
+            +
+        </button>
+    </div>
+    <div class="price">
+        {{price}}₹
+    </div>
+    <button class="delete" (click) = "deleteProduct()">
+        Delete
+    </button>
+</div>

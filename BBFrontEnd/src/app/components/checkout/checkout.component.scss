@@ -1,0 +1,39 @@
+@import "../../colors.scss";
+@import "../signup/signup.component.scss";
+.checkout-container{
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .title{
+        width:70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            padding: 10px 22px;
+            background: $theme-color-dark;
+            color:white;
+            border-style: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+    .item-container{
+        width:70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .looping-cont{
+            width:100%;
+            margin:15px 0px;
+        }
+    }
+
+    get-details{
+        width:70%;
+    }
+    
+}

@@ -1,0 +1,33 @@
+<div class="signup-cont">
+    <div class="inner-cont">
+        <h2>Sign up: </h2>
+        <div class="form-cont">
+                <div class="input-cont">
+                    <input type="text" value="{{userEmail}}" disabled #email>
+                </div>
+                <div class="input-cont">
+                    <input type="text" required #name>
+                    <label> Name</label>
+                </div>
+                <div class="input-cont">
+                    <input type="number" required #dr>
+                    <label>Door Number</label>
+                </div>
+                <div class="input-cont">
+                    <input type="text" required #street>
+                    <label>Street</label>
+                </div>
+                <div class="input-cont">
+                    <input type="number" required #pincode>
+                    <label>PinCode</label>
+                </div>
+                <div class="input-cont">
+                    <input type="text" required #city>
+                    <label>City</label>
+                </div>
+                <div class="submit">
+                    <input type="button" value="Submit" (click)="formSubmit(name.value,dr.value,street.value,pincode.value,city.value)">
+                </div>
+        </div>
+    </div>
+</div>

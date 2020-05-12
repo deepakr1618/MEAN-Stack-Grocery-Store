@@ -1,0 +1,90 @@
+@import "../../colors.scss";
+$border-width : 2px;
+
+
+@mixin labelHover{
+    top:-4.5px;
+    left:8px;
+    font-size:12px;
+    background:$theme-color-light;
+    padding: 0px 10px;
+    border-radius: 99px;
+    color:#333;
+}
+
+.input-cont{
+    width:80%;
+    position: relative;
+    input{
+        width: 100%;
+        padding:9px 7px 7px 7px;
+        font-size:20px;
+        border: $border-width solid $theme-color-light;
+        border-radius: 5px;
+        outline: none;
+    }
+    label{
+        position: absolute;
+        left:10px;
+        top:12px;
+        transition: 0.4s all ease;
+        user-select: none;
+        color:rgba(51, 51, 51, 0.507);
+        pointer-events: none;
+    }
+    input:focus{
+        border: $border-width solid $theme-color-dark;
+        + label{
+            @include labelHover()
+        }
+    }
+
+    input:valid{
+        border: $border-width solid $theme-color-dark;
+        + label{
+            @include labelHover()
+        }
+    }
+
+    input:invalid{
+        border: $border-width solid rgb(97, 97, 97);
+    }
+}
+
+.signup-cont{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    .inner-cont{
+        width:70%;
+        .form-cont{
+            margin-top: 50px;
+            width:100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            row-gap: 45px;
+            
+            .submit{
+                width:80%;
+                position: relative;
+                margin:10px auto;
+                display:flex;
+                justify-content: flex-start;
+                input[type="button"]{
+                    width:200px;
+                    height:40px;
+                    border-radius: 7px;
+                    background: $theme-color-dark;
+                    color:white;
+                    border-style: none;
+                    cursor: pointer;
+                    font-size: 17px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+   
+    
+}

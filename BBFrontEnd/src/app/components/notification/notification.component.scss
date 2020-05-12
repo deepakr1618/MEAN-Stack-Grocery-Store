@@ -1,0 +1,42 @@
+@import "../../colors.scss";
+
+.notification-cont{
+    max-width:50vw;
+    position: fixed;
+    top:0px;
+    left:0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding:10px 0px 0px 10px;
+
+    .noti{
+        padding:0px 5px;
+        margin:10px 0px;
+        background: $theme-color-dark;
+        border-radius: 3px;
+        animation: fadeInOut 3s ease infinite;
+        color:white;
+        font-size: 12px;
+        p{
+            padding:0px;
+        }
+    }
+}
+
+@keyframes fadeInOut{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display:nonergb(5, 144, 0)
+    }
+}
